@@ -33,7 +33,7 @@ def fetch_online_players(session: requests.Session) -> dict[str, dict]:
 
 
 def check_wilderness_batch(session: requests.Session, coords: list[list[int]]) -> list[bool]:
-    """Return a wilderness flag per coordinate, in input order. Timeout 8 s (see CLAUDE.md)."""
+    """Return a wilderness flag per coordinate, in input order. Timeout 8 s."""
     payload = {"query": coords}
     resp = fetch(session.post, LOCATION_API_URL, json=payload, timeout=8)
     resp.raise_for_status()

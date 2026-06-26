@@ -1,6 +1,6 @@
 """Logging, run statistics, and small formatting helpers.
 
-Logging policy (see CLAUDE.md): routine per-cycle activity is NOT logged. Errors
+Logging policy: routine per-cycle activity is NOT logged. Errors
 log immediately via `log_error` (which bumps the error counter); every
 `SUMMARY_INTERVAL` the main loop calls `log_summary_if_due` to emit one rollup
 line and reset the counters.

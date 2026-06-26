@@ -135,7 +135,7 @@ The monitor can also push every ping to a companion game-client mod over a WebSo
 | File | What it is |
 |------|-----------|
 | `run.py` | Entry point — starts the monitor service |
-| `wildness_monitor/` | The bot package (see the module map in `CLAUDE.md`) |
+| `wildness_monitor/` | The bot package |
 | `.env` / `.env.example` | Your secrets & config (gitignored) and the template to copy from |
 | `data/georgia_residents.txt` | Saved list of Georgia residents (auto-updated every hour) |
 | `data/whitelist.txt` / `data/blacklist.txt` | Never-ping / always-ping name lists |

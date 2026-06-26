@@ -1,6 +1,6 @@
 """Open-towns cache: which towns an Iberian player can teleport to.
 
-Two-phase build (see CLAUDE.md for the why):
+Two-phase build:
     Phase 1 — markers.json: fast, parses isPublic=true towns + polygon centroids.
     Phase 2 — v4/towns API: verifies canOutsidersSpawn and swaps in real spawn coords.
 
@@ -30,7 +30,7 @@ _open_towns_cache: list[dict] = []
 # path needs no /v4/location API call. None = not built yet (cold); the caller
 # falls back to the API until the first build completes. Rebound wholesale by
 # build_claims_index (background thread), so reads are atomic — same pattern as
-# _open_towns_cache. See CLAUDE.md "Local wilderness detection".
+# _open_towns_cache.
 _claims_index: "list[tuple[int, int, int, int, list, str]] | None" = None
 
 

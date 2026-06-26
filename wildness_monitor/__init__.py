@@ -1,6 +1,6 @@
 """Wildness Monitor — EarthMC wilderness alert system for the Georgia nation.
 
-Package layout (see CLAUDE.md for the full map):
+Package layout:
     config        all tunable constants + secrets (env-overridable)
     http          shared HTTP retry helper
     logkit        logging, stats counters, error/duration formatting

@@ -1,6 +1,6 @@
 """Wilderness detection plus the per-player position / movement state.
 
-Module-level caches (written only from the main thread — no locking, see CLAUDE.md):
+Module-level caches (written only from the main thread — no locking):
     _position_cache  last known (x, z) per player (lowercase name)
     _wilderness_cache last known wilderness status per player
     _track            per-player {x, z, t, wild_since}: velocity baseline + dwell timer

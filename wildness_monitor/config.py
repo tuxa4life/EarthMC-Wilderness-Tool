@@ -61,7 +61,7 @@ NATION_NAME = "Georgia"
 RESIDENTS_FILE = os.path.join(DATA_DIR, "georgia_residents.txt")
 RESIDENTS_REFRESH_INTERVAL = 1 * 3600   # re-fetch residents every 1 h
 
-# ── Whitelist / blacklist (see CLAUDE.md "Whitelist / Blacklist") ──────────
+# ── Whitelist / blacklist ──────────────────────────────────────────────────
 # whitelist = never ping (even if Georgian); blacklist = always ping (even if
 # not Georgian). Whitelist wins when a name is on both. One name per line.
 WHITELIST_FILE = os.path.join(DATA_DIR, "whitelist.txt")
@@ -92,7 +92,7 @@ STATIONARY_MOVE_BLOCKS = 15      # blocks moved since last cycle below which no 
 # Single detection cadence: every PING_CYCLE_INTERVAL the main loop scans ALL
 # monitored players and pushes to both Discord (one live-edited message per target
 # — no new message per cycle, so a fast cadence doesn't crowd the channel) and the
-# broadcast/mod clients. See CLAUDE.md "Ping cycle".
+# broadcast/mod clients.
 PING_CYCLE_INTERVAL = 10                  # seconds between detection cycles (positions, Discord, broadcast)
 CONSECUTIVE_FAILURES_THRESHOLD = 3       # failures before marking API down
 API_DOWN_BACKOFF_START = 60              # initial backoff seconds

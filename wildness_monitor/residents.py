@@ -6,8 +6,7 @@ place) under `_residents_lock`, so a reader that grabs the current reference via
 
 This module also owns the whitelist/blacklist state (`_whitelist`, `_blacklist`):
 loaded once at startup, then edited only from the main thread via `modify_list`
-(driven by the command queue), and persisted to disk on every edit. See
-CLAUDE.md "Whitelist / Blacklist".
+(driven by the command queue), and persisted to disk on every edit.
 """
 import time
 import threading
@@ -28,12 +27,12 @@ _session = requests.Session()
 # Whitelist/blacklist sets (lowercase names). Both are loaded once at startup and
 # thereafter only ever mutated from the MAIN thread (via the command queue), so —
 # like the other single-writer caches — they need no lock. The bot never touches
-# them directly. See CLAUDE.md "Whitelist / Blacklist".
+# them directly.
 _whitelist: set[str] = set()
 _blacklist: set[str] = set()
 
 # Temporary per-player mutes (/timeout): {lowercase name: expiry epoch seconds}.
-# In-memory only — a restart clears them (see CLAUDE.md "Timeouts"). Written only
+# In-memory only — a restart clears them. Written only
 # from the main thread (command queue), like the whitelist/blacklist sets.
 _timeouts: dict[str, float] = {}
 

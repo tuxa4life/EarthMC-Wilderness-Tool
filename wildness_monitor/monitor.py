@@ -34,7 +34,7 @@ _consecutive_failures = 0
 _api_down_since: float | None = None
 _current_backoff = config.API_DOWN_BACKOFF_START
 
-# Inbound-command plumbing (see TODO feature B / CLAUDE.md "Command bot"). The
+# Inbound-command plumbing. The
 # bot thread only ever .put()s onto this queue; the main loop drains and applies
 # it, so all shared-state writes stay on the main thread.
 command_queue: "queue.Queue[bot.Command]" = queue.Queue()
