@@ -3,6 +3,8 @@
 
 # runtime cache
 georgia_residents.txt
+blacklist.txt
+whitelsit.txt
 
 # python
 .venv/
