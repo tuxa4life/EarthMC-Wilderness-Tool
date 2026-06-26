@@ -174,5 +174,3 @@ The behavioral numbers live in `wildness_monitor/config.py`; secrets/IDs live in
 | `TIMEOUT_DEFAULT_MINUTES` | 5 | Default length of a `/timeout` mute when no duration is given |
 | `CLAIMS_REFRESH_INTERVAL` | 1 hour | How often the local town-boundary map is rebuilt |
 | `RESIDENTS_REFRESH_INTERVAL` | 1 hour | How often the Georgia member list is re-synced |
-#   E a r t h M C - W i l d e r n e s s - T o o l  
- 

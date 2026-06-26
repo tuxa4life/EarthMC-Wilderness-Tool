@@ -1,0 +1,14 @@
+# secrets
+.env
+
+# runtime cache
+georgia_residents.txt
+
+# python
+.venv/
+__pycache__/
+*.pyc
+
+# dev stuff
+HOSTING_GUIDE.md
+CLAUDE.md
